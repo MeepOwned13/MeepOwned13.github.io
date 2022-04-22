@@ -135,7 +135,7 @@ a:hover {
 }
 
 a:visited {
-    color: #f308d4;
+    color: #00eeff;
 }
 
 /* #endregion */
@@ -239,8 +239,8 @@ header img {
     footer {
         margin: 50px auto;
         position: relative;
-        background-image: url("../media/exitwall.jpg");
-        background-size: cover;
+        background-image: url("../media/dark_tiles.jpg");
+        background-size: contain;
         border-radius: 15px;
     }
 
@@ -255,10 +255,10 @@ header img {
         transform: translateY(-50%) rotate(-10deg);
         float: right;
         font-size: 290%;
-        color: black;
         font-family: 'Shadow Into Light', cursive;
         font-weight: bold;
         letter-spacing: normal;
+        color: rgb(203, 203, 203);
     }
 
     footer p {
