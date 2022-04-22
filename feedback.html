@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Art of Speedrunning Portal - Personal experience and feedback</title>
+    <link rel="icon" href="./media/custom_logo.png" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./style/main.css">
+    <!-- <link rel="stylesheet" href="./style/alternate.css"> -->
+    <link rel="stylesheet" href="./style/screen.css">
+    <link rel="stylesheet" href="./style/print.css">
+</head>
+
+<body>
+    <nav class="jumptocontent">
+        <a href="#content"><span>Jump to content</span></a>
+    </nav>
+    <header>
+        <h1>The Art of Speedrunning</h1>
+        <a href="media/full_logo.png" target="blank"><img src="media/lowres_full_logo.png"
+            alt="Portal text with Portal logo"></a>
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand d-md-none" href="index.html">
+                    <img src="media/Aperture_Laboratories_Logo.png" alt="Aperture Laboratories Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Homepage</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="glitches.html">Glitches</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="chambers.html">Chambers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="feedback.html">Feedback</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="content">
+        <section class="experience">
+            <article class="boxed">
+                <h2><span>My own experience with speedrunning Portal</span></h2>
+                <p>Hi, I'm <a href="https://www.speedrun.com/user/MeepOwned13" target="blank">MeepOwned13</a> and I have been speedrunning this game for 5 months now.
+                    My love for the game comes from the love of puzzles and also mostly the fact that I love solving things in the unintended way.<br>
+                    If you've ever thought about speedrunning this game I would highly recommend it. Just know it will take a
+                    while to learn but there are some awesome tutorials on the internet. My recommendation is just to <strong>learn
+                    a couple levels at a time</strong> and do some runs to see your improvement, that way you won't get demotivated.<br>
+                    The first time I managed to achieve <b>sub 20 minutes</b> felt awesome and it's that rush that I think it's
+                    worth playing for. My Personal Best currently stands at a little above <b>17 and a half minutes</b> and <strong>there's
+                    still a lot of room for improvement</strong> to get to anything close as the top runners.
+                </p>
+            </article>
+            <div class="vidwrap">
+                <iframe src="https://www.youtube.com/embed/II_X6jcqemg" title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <article class="boxed">
+                <h2><span>Feedback and expanding the website</span></h2>
+                <p>I designed a form to collect feedback on the website and to ask about <strong>your experience with running the
+                    game</strong>. But don't worry if you don't speedrun, I'm still interested in your feedback about the website.
+                    My idea is to expand the website to display your experience and recommendations for speedrunners who are
+                    just starting out.</p>
+            </article>
+        </section>
+        
+        <form method="post" action="mailto:sebokmatyas01@gmail.com">
+            <fieldset class="data">
+                <legend>Information</legend>
+                <div class="flex">
+                    <div>
+                        <label for="nickname">Your nickname</label><br>
+                        <input type="text" name="Your nickname" id="nickname" required="required" maxlength="20">
+                    </div>
+                    <div>
+                        <label for="profile">Speedrun.com profile (Optional)</label><br>
+                        <input type="url" name="Speedrun.com profile (Optional)" id="profile"
+                            value="https://www.speedrun.com/user/" maxlength="50">
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="flex">
+                <fieldset class="checkboxes">
+                    <legend>Which categories do you run?</legend>
+                    <input type="checkbox" name="Out of Bounds" id="OoB" value="yes"><label for="OoB">Out of
+                        Bounds</label><br>
+                    <input type="checkbox" name="Inbounds" id="inbounds" value="yes"><label
+                        for="inbounds">Inbounds</label><br>
+                    <input type="checkbox" name="Inbounds no SLA" id="inboundsNoSLA" value="yes"><label
+                        for="inboundsNoSLA">Inbounds no SLA</label><br>
+                    <input type="checkbox" name="Glitchless" id="glitchless" value="yes"><label
+                        for="glitchless">Glitchless</label><br>
+                    <input type="checkbox" name="I don't run the game" id="doesntrun" value="yes"><label
+                        for="doesntrun">I
+                        don't run the game</label><br>
+                </fieldset>
+
+                <fieldset class="radiobuttons">
+                    <legend>Were the glitch explanations clear?</legend>
+                    <input type="radio" name="rating" id="radio1" value="4" required="required"><label for="radio1">Absolutely</label><br>
+                    <input type="radio" name="rating" id="radio2" value="3" required="required"><label for="radio2">Kind of</label><br>
+                    <input type="radio" name="rating" id="radio3" value="2" required="required"><label for="radio3">With the pictures,
+                        videos</label><br>
+                    <input type="radio" name="rating" id="radio4" value="1" required="required"><label for="radio4">Not really</label><br>
+                </fieldset>
+            </div>
+
+            <div class="flex">
+                <fieldset class="areainput">
+                    <legend>Feedback</legend>
+                    <label for="feedbackarea">Share your runs and experiences, or if you don't run the game, your
+                        feedback
+                        here</label><br>
+                    <textarea rows="10" name="Feedback" id="feedbackarea" required="required" maxlength="700"></textarea>
+                </fieldset>
+
+                <fieldset class="submitreset">
+                    <legend>Submitting</legend>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </fieldset>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <h2>the cake is a lie</h2>
+        <p>One of the most fun ways for me to run the game is while talking with friends and streaming the runs to
+            them. We are Computer Science students and came up with an idea to use a sorting algorithm called
+            <b>Bogosort</b> which basically shuffles a certain amount of numbers and checks if they are in the right order.
+            The game is that we start the program and a run at the same time and <strong>if the algorithm sorts I have to
+            restart</strong>. This can happen in anywhere from a minute to 25 which makes it extremely unpredictable. For
+            anyone wanting to try this idea, my program consists of a shuffle algorythm in <b>Python</b> with a timer,
+            ideal list size is around 11-12.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
