@@ -1,0 +1,111 @@
+@media print {
+
+    :root {
+        --portalblue: black;
+        --portalorange: black;
+    }
+
+    * {
+        color: black;
+    }
+
+    header, main, footer {
+        width: 95%;
+        font-size: medium;
+    }
+
+    header {
+        display: none;
+    }
+
+    li {
+        list-style: circle;
+    }
+
+    footer {
+        margin: 0 auto;
+    }
+    
+    footer h2 {
+        display: block;
+        width: 100%;
+        position: relative;
+        transform: none;
+        top: 0;
+        text-align: center;
+    }
+
+    footer p {
+        width: 100%;
+    }
+
+    .triple img {
+        display: none;
+    }
+
+    .boxed {
+        width: 50%;
+    }
+
+    .boxed:nth-of-type(1) {
+        margin-right: 20px;
+    }
+
+    .portalsr h2 span {
+        color: var(--portalblue);
+    }
+
+    caption {
+        display: none;
+    }
+
+    table {
+        page-break-before: always;
+        margin-bottom: 30px;
+    }
+    
+    .vidwrap {
+        display: none;
+    }
+
+    .carousel {
+        display: none;
+    }
+
+    .extra {
+        margin: auto;
+        width: 50%;
+    }
+
+    .extra img {
+        width: 100%;
+    }
+
+    .righttext .extra, .lefttext .extra {
+        border: none;
+    }
+
+    .experience {
+        margin-bottom: 0;
+    }
+
+    .boxed h2 span {
+        color: var(--portalblue);
+    }
+
+    .experience .boxed {
+        margin: 0;
+    }
+
+    .printbreak {
+        page-break-before: always;
+    }
+
+    form {
+        display: none;
+    }
+
+    a:after {
+        content: " (" attr(href) ")";
+    }
+}

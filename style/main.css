@@ -1,0 +1,577 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@font-face {
+    font-family: SourceFont;
+    src: url('./NeueHelveticaBQ-Bold.otf');
+}
+@font-face {
+    font-family: TitleFont;
+    src: url('./ArchivoNarrow-SemiBold.ttf');
+}
+
+:root {
+    --portalblue: rgb(0, 173, 239);
+    --portalorange: rgb(255, 106, 0);
+    --boxcolor: rgba(0, 0, 0, 0.7);
+    --gradient: linear-gradient(90deg, var(--portalblue) 45%, var(--portalorange) 55%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: SourceFont, Arial, Helvetica, sans-serif;
+    color: rgb(222, 222, 222);
+}
+
+body {
+    background-image: url('../media/custom_left.png'), url('../media/custom_right.png'), url('../media/longtiles_dark.png');
+    background-size: contain, contain, contain;
+    background-repeat: no-repeat, no-repeat, repeat;
+    background-attachment: fixed, fixed, scroll;
+    background-position: left, right, 0 0;
+    padding: 10px;
+    font-size: medium;
+}
+
+header, main, footer {
+    position: relative;
+    margin: auto;
+    width: 80%;
+    min-width: 300px;
+    max-width: 1000px;
+}
+
+/* #region basestyle */
+
+p {
+    text-align: justify;
+}
+
+li {
+    text-align: left;
+    background-image: url("../media/icon_time.png");
+    background-repeat: no-repeat;
+    background-position: left 4px;
+    padding: 3px 10px 3px 24px;
+    list-style: none;
+}
+
+h1 {
+    width: 55%;
+    font-family: TitleFont, Arial, Helvetica, sans-serif;
+    font-variant: small-caps;
+    font-size: 350%;
+    color: rgb(203, 203, 203);
+    padding: 20px 5px;
+    text-align: center;
+    float: left;
+}
+
+h2 {
+    font-family: TitleFont, Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    font-size: 200%;
+    color: var(--portalblue);
+    text-align: center;
+}
+
+b, strong {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+b {
+    color: var(--portalblue);
+}
+
+strong {
+    color: var(--portalorange);
+}
+
+q {
+    font-style: italic;
+    font-size: 95%;
+    color: white;
+}
+
+abbr[title] {
+    border: none;
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+}
+
+abbr:hover::after {
+    content: attr(title);
+    font-weight: 400;
+    margin: 0 5px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid var(--portalblue);
+    background: black;
+    color: white;
+}
+
+.vidwrap {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 */
+}
+
+.vidwrap iframe {
+    border-radius: 0 0 6px 6px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+a {
+    color: var(--portalblue);
+}
+
+a:hover {
+    color: var(--portalorange);
+}
+
+a:visited {
+    color: #f308d4;
+}
+
+/* #endregion */
+
+/* #region jumptocontent */
+
+.jumptocontent {
+    text-align: center;
+    width: 210px;
+    margin: 20px auto 20px;
+}
+
+.jumptocontent a {
+    position: absolute;
+    left: -9999px;
+}
+
+.jumptocontent a:focus {
+    position: static;
+    background: var(--boxcolor);
+    padding: 5px;
+    text-decoration: none;
+    outline: none;
+    border: 2px solid var(--portalblue);
+    border-right: 2px solid var(--portalorange);
+    border-bottom: 2px solid var(--portalorange);
+    border-radius: 5px;
+    font-size: 150%;
+}
+
+.jumptocontent span {
+    background-image: linear-gradient(90deg, var(--portalblue), var(--portalorange));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color:transparent;
+}
+
+/* #endregion */
+
+/* #region header */
+
+header {
+    padding: 10px 0 0 0;
+    border-radius: 10px;
+    background-image: url('../media/dark_tiles.jpg');
+    background-repeat: repeat;
+    background-size: 40%;
+    margin-bottom: 30px;
+}
+
+header img {
+    width: 45%;
+    padding: 1% 10px 20px;
+    float: right;
+}
+
+.navbar-nav li {
+    background: none;
+    padding: 0 10px;
+    font-size: 120%;
+}
+
+.navbar {
+    width: 55%;
+    background-image: url('../media/nav_tiles.jpg');
+    background-size: contain;
+    border-top: 1px solid var(--portalblue);
+    border-right: 1px solid var(--portalblue);
+    border-radius: 0 8px;
+    padding: 4px 0;
+    font-size: 108%;
+}
+
+.navbar-nav {
+    margin: 0 auto;
+}
+
+.nav-link {
+    color: var(--portalorange) !important;
+}
+
+.nav-link.active {
+    color: var(--portalblue) !important;
+}
+
+.nav-link:hover {
+    color: white !important;
+    transition: 0.6s;
+}
+
+.navbar-brand img {
+    padding: 0;
+    margin: 8px 0;
+    text-align: left;
+}
+
+/* #endregion */
+
+/* #region footer */
+
+    footer {
+        margin: 50px auto;
+        position: relative;
+        background-image: url("../media/exitwall.jpg");
+        background-size: cover;
+        border-radius: 15px;
+    }
+
+    footer h2 {
+        text-align: left;
+        width: 40%;
+        margin-top: 0;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%) rotate(-10deg);
+        float: right;
+        font-size: 290%;
+        color: black;
+        font-family: 'Shadow Into Light', cursive;
+        font-weight: bold;
+        letter-spacing: normal;
+    }
+
+    footer p {
+        width: 58%;
+        background: var(--boxcolor);
+        border-radius: 15px;
+        padding: 15px;
+    }
+
+/* #endregion */
+
+/* #region triple */
+
+.triple {
+    margin: auto;
+    padding: 10px;
+    display: flex;
+}
+
+.triple img {
+    margin: 0 10px;
+}
+
+.boxed {
+    width: 40%;
+    background: var(--boxcolor);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.boxed:nth-of-type(2) h2 { color: var(--portalorange);}
+
+/* #endregion */
+
+/* #region portalsr */
+
+.portalsr {
+    width: 75%;
+    margin: 20px auto 10px;
+    background-color: var(--boxcolor);
+    border-radius: 10px 0;
+    padding: 15px 10px 5px;
+}
+
+.portalsr h2 {
+    font-size: 270%;
+}
+
+.portalsr h2 span {
+    font-family: TitleFont, Arial, Helvetica, sans-serif;
+    background-image: var(--gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.portalsr li {
+    text-align: left;
+}
+
+/* #endregion */
+
+/* #region table */
+
+table, tr, td, th {
+    margin: 20px auto 5px;
+    width: 60%;
+    border: 2px dashed var(--portalblue);
+    border-right: 2px dashed var(--portalorange);
+    border-bottom: 2px dashed var(--portalorange);
+    background: var(--boxcolor);
+}
+
+tr, td, th {
+    width: 33%;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    border: 2px dashed var(--portalblue);
+}
+
+th[scope="row"]{
+    text-align: left;
+}
+
+tr td:nth-child(3){
+    text-align: right;
+}
+
+caption {
+    background: var(--boxcolor);
+    padding: 5px 10px 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+caption strong {
+    color: var(--portalblue);
+}
+
+/* #endregion */
+
+/* #region sidebyside */
+
+.sidebyside {
+    width: 95%;
+    margin: 20px auto 20px;
+}
+
+.carousel img {
+    border-radius: 0 0 6px 6px;
+}
+
+.sidebyside .text {
+    background: var(--boxcolor);
+    padding: 10px 15px 10px;
+    border-radius: 10px 10px 0 0;
+    margin: 10px 0 0px;
+}
+
+.sidebyside .extra {
+    margin: 0px auto 10px;
+    border-radius: 0 0 10px 10px;
+    background: var(--boxcolor);
+}
+
+.extra img {
+    width: 100%;
+    height: auto;
+}
+
+figure {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+figcaption {
+    text-align: center;
+    border-radius: 0 0 8px 8px;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.righttext .text h2 { color: var(--portalorange);}
+
+.righttext .extra {
+    border: 4px solid var(--portalblue);
+    border-right: 6px groove var(--portalorange);
+    border-top: 6px groove var(--portalorange);
+}
+
+.lefttext .extra {
+    border: 4px solid var(--portalorange);
+    border-left: 6px groove var(--portalblue);
+    border-top: 6px groove var(--portalblue);
+}
+
+
+/* #endregion */
+
+/* #region experience */
+
+    .experience {
+        width: 90%;
+        margin: 0 auto 30px;
+    }
+
+    .experience .boxed {
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    .experience .boxed:nth-of-type(1) {
+        border-radius: 10px 10px 0 0;
+        margin: auto;
+    }
+
+    .experience h2 span {
+        font-size: 125%;
+        font-family: TitleFont, Arial, Helvetica, sans-serif;
+        background-image: var(--gradient);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color:transparent;
+    }
+
+    .experience .vidwrap {
+        border-radius: 0 0 10px 10px;
+        border: 4px solid rgb(203, 203, 203);
+        border-right: 6px groove var(--portalorange);
+        border-left: 6px groove var(--portalblue);
+    }
+
+/* #endregion */
+
+/* #region feedback */
+
+    form {
+        width: 90%;
+        margin: auto;
+    }
+
+    fieldset {
+        background: var(--boxcolor);
+        border-radius: 10px;
+        padding: 10px;
+        margin-top: 10px;
+        margin: auto;
+    }
+
+    legend {
+        margin: 0;
+        text-align: center;
+        color: var(--portalblue);
+    }
+
+    input, textarea {
+        background-color: black;
+        border: 1px solid var(--portalblue);
+        padding: 2px 5px;
+    }
+
+    .data {
+        width: 98%;
+    }
+    
+    .data input, textarea {
+        width: 100%;
+        transition: 0.1s;
+    }
+    
+    .data input:hover, .data input:focus, textarea:hover, textarea:focus {
+        border: 2px solid var(--portalorange);
+    }
+
+    .data input:focus, textarea:focus {
+        outline: none;
+        border-radius: 5px;
+    }
+
+    .flex{
+        display: flex;
+        margin-top: 10px;
+    }
+
+    .flex div, .flex fieldset {
+        width: 48%;
+        margin: auto;
+    }
+
+    .checkboxes label:hover, .radiobuttons label:hover {
+        color: var(--portalorange);
+        margin-left: 10px;
+        transition: 0.7s;
+    }
+
+    input[type="checkbox"]:checked + label, input[type="radio"]:checked + label{
+        color: var(--portalorange);
+    }
+
+    input[type="checkbox"], input[type="radio"] {
+        -webkit-appearance: none;
+        appearance: none;
+        margin: 0 5px 0 10px;
+        background: var(--boxcolor);
+        border: 1px solid var(--portalblue);
+        display: inline-block;
+        transition: 0.2s;
+    }
+
+    input[type="checkbox"] {
+        padding: 7px;
+        border-radius: 3px;
+    }
+
+    input[type="checkbox"]:checked, input[type="radio"]:checked{
+        padding: 8px;
+        border-color: var(--portalorange);
+        background-color: var(--portalorange);
+    }
+
+    input[type="radio"] {
+        padding: 7px;
+	    border-radius: 50px;
+    }
+
+    .flex fieldset.areainput {
+        width: 72%;
+        text-align: center;
+    }
+
+    .flex fieldset.submitreset {
+        width: 25%;
+        text-align: center;
+        font-size: 120%;
+    }
+
+    input[type="submit"], input[type="reset"] {
+        width: 100%;
+        margin-top: 20px;
+        border-radius: 5px;
+        border: 2px solid var(--portalblue);
+    }
+
+    input[type="submit"]:hover, input[type="reset"]:hover {
+        border-color: var(--portalorange);
+        color: var(--portalorange);
+    }
+
+/* #endregion */

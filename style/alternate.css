@@ -1,0 +1,56 @@
+:root {
+    --boxcolor: black;
+}
+
+body {
+    background-image: url('../media/short_left.png'), url('../media/short_right.png'), url('../media/longtiles_dark.png');
+    font-size: x-large;
+}
+
+header, main, footer{
+    width: 95%;
+    max-width: 1300px;
+}
+
+header {
+    background-image: url("../media/nav_tiles.jpg");
+}
+
+header img {
+    display:block;
+    float: none;
+    width: 50%;
+    margin: auto;
+}
+
+h1 {
+    width: 100%;
+}
+
+.navbar {
+    width: 100%;
+    background: var(--boxcolor);
+    border-radius: 0 0 8px 8px;
+    border-right: none;
+    padding: 0;
+}
+
+footer h2 {
+    display: none;
+}
+
+footer p {
+    width: 100% !important;
+}
+
+.triple img {
+    display: none;
+}
+
+.boxed {
+    width: 50%;
+}
+
+.boxed:nth-of-type(1) {
+    margin-right: 20px;
+}
