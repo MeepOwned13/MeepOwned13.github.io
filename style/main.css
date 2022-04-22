@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light');
-
 @font-face {
     font-family: SourceFont;
     src: url('./NeueHelveticaBQ-Bold.otf') format('opentype');
@@ -7,6 +5,10 @@
 @font-face {
     font-family: TitleFont;
     src: url('./ArchivoNarrow-SemiBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: CakeText;
+    src: url('./ShadowsIntoLight-Regular.ttf') format('truetype');
 }
 
 :root {
@@ -245,7 +247,7 @@ header img {
     }
 
     footer h2 {
-        text-align: left;
+        text-align: center;
         width: 40%;
         margin-top: 0;
         position: absolute;
@@ -255,9 +257,9 @@ header img {
         transform: translateY(-50%) rotate(-10deg);
         float: right;
         font-size: 290%;
-        font-family: 'Shadow Into Light', cursive;
+        font-family: CakeText, cursive;
         font-weight: bold;
-        letter-spacing: normal;
+        letter-spacing: 4px;
         color: rgb(203, 203, 203);
     }
 
