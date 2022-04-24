@@ -54,3 +54,23 @@ footer p {
 .boxed:nth-of-type(1) {
     margin-right: 20px;
 }
+
+.switcher {
+    width: 45%;
+}
+
+@media screen and (max-width: 800px) {
+    h1, h2, .portalsr h2, .experience h2 {
+        font-size: 180%;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    .navbar {
+        font-size: 90%;
+    }
+    .switcher {
+        font-size: 130%;
+    }
+}

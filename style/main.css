@@ -1,14 +1,14 @@
 @font-face {
     font-family: SourceFont;
-    src: url('./NeueHelveticaBQ-Bold.otf') format('opentype');
+    src: url('./fonts/NeueHelveticaBQ-Bold.otf') format('opentype');
 }
 @font-face {
     font-family: TitleFont;
-    src: url('./ArchivoNarrow-SemiBold.ttf') format('truetype');
+    src: url('./fonts/ArchivoNarrow-SemiBold.ttf') format('truetype');
 }
 @font-face {
     font-family: CakeText;
-    src: url('./ShadowsIntoLight-Regular.ttf') format('truetype');
+    src: url('./fonts/ShadowsIntoLight-Regular.ttf') format('truetype');
 }
 
 :root {
@@ -26,6 +26,7 @@
 }
 
 body {
+    background-color: black;
     background-image: url('../media/custom_left.png'), url('../media/custom_right.png'), url('../media/longtiles_dark.png');
     background-size: contain, contain, contain;
     background-repeat: no-repeat, no-repeat, repeat;
@@ -62,7 +63,7 @@ h1 {
     width: 55%;
     font-family: TitleFont, Arial, Helvetica, sans-serif;
     font-variant: small-caps;
-    font-size: 350%;
+    font-size: 300%;
     color: rgb(203, 203, 203);
     padding: 20px 5px;
     text-align: center;
@@ -142,6 +143,41 @@ a:visited {
 
 /* #endregion */
 
+/* #region switcher */
+.switcher {
+    margin: auto;
+    width: 15%;
+    min-width: 300px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 200%;
+    font-family: TitleFont, Arial, Helvetica, sans-serif;
+    border: 2px solid var(--portalblue);
+    border-right: 2px solid var(--portalorange);
+    border-bottom: 2px solid var(--portalorange);
+    border-radius: 5px;
+    background: var(--boxcolor);
+}
+
+.switcher span {
+    background-image: var(--gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; 
+}
+
+.switcher {
+    cursor: pointer;
+}
+
+
+.switcher:hover span {
+    color: white;
+    transition: 0.3s;
+}
+
+/* #endregion */
+
 /* #region jumptocontent */
 
 .jumptocontent {
@@ -185,7 +221,7 @@ header {
     background-image: url('../media/dark_tiles.jpg');
     background-repeat: repeat;
     background-size: 40%;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 header img {
@@ -445,8 +481,11 @@ video {
         margin: auto;
     }
 
+    .experience h2 {
+        font-size: 230%;
+    }
+
     .experience h2 span {
-        font-size: 125%;
         font-family: TitleFont, Arial, Helvetica, sans-serif;
         background-image: var(--gradient);
         background-clip: text;
@@ -521,7 +560,7 @@ video {
     .checkboxes label:hover, .radiobuttons label:hover {
         color: var(--portalorange);
         margin-left: 10px;
-        transition: 0.7s;
+        transition: 0.3s;
     }
 
     input[type="checkbox"]:checked + label, input[type="radio"]:checked + label{

@@ -45,14 +45,14 @@
 @media screen and (max-width: 1200px) {
 
     footer h2 {
-        top: 50%;
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
         text-align: center;
         width: 20%;
         height: 100%;
         writing-mode: vertical-rl;
-        padding-right: 8%;
+        left: 72%;
+        padding-left: 5%;
     }
 
     footer p {
