@@ -244,6 +244,10 @@ header > a img{
     text-align: left;
 }
 
+a.navbar-brand.d-md-none {
+    margin: 0;
+}
+
     /* #region switcher */
 
     .switcher {
