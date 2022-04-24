@@ -40,7 +40,7 @@ header, main, footer {
     position: relative;
     margin: auto;
     width: 80%;
-    min-width: 300px;
+    min-width: 280px;
     max-width: 1000px;
 }
 

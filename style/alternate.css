@@ -65,11 +65,15 @@ legend {
 
 @media screen and (max-width: 800px) {
     h1 {
-        font-size: 300% !important;
+        font-size: 240% !important;
     }
 
     h2, .portalsr h2, .experience h2 {
         font-size: 180%;
+    }
+
+    table {
+        font-size: 80%;
     }
 
 }
