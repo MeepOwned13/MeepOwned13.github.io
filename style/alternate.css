@@ -7,6 +7,10 @@ body {
     font-size: x-large;
 }
 
+* {
+    color: white;
+}
+
 header, main, footer{
     width: 95%;
     max-width: 1300px;
@@ -55,12 +59,16 @@ footer p {
     margin-right: 20px;
 }
 
-.switcher {
-    width: 45%;
+legend {
+    font-size: 120%;
 }
 
 @media screen and (max-width: 800px) {
-    h1, h2, .portalsr h2, .experience h2 {
+    h1 {
+        font-size: 300% !important;
+    }
+
+    h2, .portalsr h2, .experience h2 {
         font-size: 180%;
     }
 
@@ -69,8 +77,5 @@ footer p {
 @media screen and (max-width: 1000px) {
     .navbar {
         font-size: 90%;
-    }
-    .switcher {
-        font-size: 130%;
     }
 }

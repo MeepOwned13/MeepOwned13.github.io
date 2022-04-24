@@ -28,6 +28,7 @@
 
     h1 {
         width: 100%;
+        font-size: 350%;
     }
 
     .navbar {
@@ -51,7 +52,7 @@
         width: 20%;
         height: 100%;
         writing-mode: vertical-rl;
-        left: 72%;
+        left: 75%;
         padding-left: 5%;
     }
 

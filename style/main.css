@@ -1,18 +1,18 @@
 @font-face {
     font-family: SourceFont;
-    src: url('./fonts/NeueHelveticaBQ-Bold.otf') format('opentype');
+    src: url('../fonts/NeueHelveticaBQ-Bold.otf') format('opentype');
 }
 @font-face {
     font-family: TitleFont;
-    src: url('./fonts/ArchivoNarrow-SemiBold.ttf') format('truetype');
+    src: url('../fonts/ArchivoNarrow-SemiBold.ttf') format('truetype');
 }
 @font-face {
     font-family: CakeText;
-    src: url('./fonts/ShadowsIntoLight-Regular.ttf') format('truetype');
+    src: url('../fonts/CaveatBrush-Regular.ttf') format('truetype');
 }
 
 :root {
-    --portalblue: rgb(0, 173, 239);
+    --portalblue: rgb(0, 185, 255);
     --portalorange: rgb(255, 106, 0);
     --boxcolor: rgba(0, 0, 0, 0.7);
     --gradient: linear-gradient(90deg, var(--portalblue) 45%, var(--portalorange) 55%);
@@ -63,9 +63,9 @@ h1 {
     width: 55%;
     font-family: TitleFont, Arial, Helvetica, sans-serif;
     font-variant: small-caps;
-    font-size: 300%;
+    font-size: 350%;
     color: rgb(203, 203, 203);
-    padding: 20px 5px;
+    padding: 15px 5px;
     text-align: center;
     float: left;
 }
@@ -141,39 +141,8 @@ a:visited {
     color: #00eeff;
 }
 
-/* #endregion */
-
-/* #region switcher */
-.switcher {
-    margin: auto;
-    width: 15%;
-    min-width: 300px;
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 200%;
-    font-family: TitleFont, Arial, Helvetica, sans-serif;
-    border: 2px solid var(--portalblue);
-    border-right: 2px solid var(--portalorange);
-    border-bottom: 2px solid var(--portalorange);
-    border-radius: 5px;
-    background: var(--boxcolor);
-}
-
-.switcher span {
-    background-image: var(--gradient);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent; 
-}
-
-.switcher {
-    cursor: pointer;
-}
-
-
-.switcher:hover span {
-    color: white;
-    transition: 0.3s;
+h2.invisible {
+    display: none;
 }
 
 /* #endregion */
@@ -220,6 +189,7 @@ header {
     border-radius: 10px;
     background-image: url('../media/dark_tiles.jpg');
     background-repeat: repeat;
+    position: relative;
     background-size: 40%;
     margin-bottom: 10px;
 }
@@ -228,6 +198,10 @@ header img {
     width: 45%;
     padding: 1% 10px 20px;
     float: right;
+}
+
+header > a img{
+    min-width: 300px;
 }
 
 .navbar-nav li {
@@ -270,6 +244,34 @@ header img {
     text-align: left;
 }
 
+    /* #region switcher */
+
+    .switcher {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 45px;
+        height: 45.58px;
+        
+        border-radius: 0 6px 0 0;
+    }
+    
+    .switcher img {
+        background: black;
+        border-radius: 0 4px 0 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .switcher:hover {
+        filter: hue-rotate(190deg);
+        transform: rotate(720deg);
+        transition: transform 1s;
+    }
+
+    /* #endregion */
+
 /* #endregion */
 
 /* #region footer */
@@ -292,10 +294,10 @@ header img {
         -ms-transform: translateY(-50%);
         transform: translateY(-50%) rotate(-10deg);
         float: right;
-        font-size: 290%;
+        font-size: 350%;
         font-family: CakeText, cursive;
-        font-weight: bold;
-        letter-spacing: 4px;
+        font-weight: 500;
+        letter-spacing: 2px;
         color: rgb(203, 203, 203);
     }
 
@@ -318,6 +320,11 @@ header img {
 
 .triple img {
     margin: 0 10px;
+}
+
+.triple img:hover {
+    filter: hue-rotate(360deg);
+    transition: 2s;
 }
 
 .boxed {
