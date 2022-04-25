@@ -16,6 +16,10 @@ header, main, footer{
     max-width: 1300px;
 }
 
+li {
+    background-position: left 10px;
+}
+
 header {
     background-image: url("../media/nav_tiles.jpg");
 }
@@ -63,6 +67,12 @@ legend {
     font-size: 120%;
 }
 
+.switcher:hover::before {
+    left: -170px;
+    top: 1px;
+    font-size: 110%;
+}
+
 @media screen and (max-width: 800px) {
     h1 {
         font-size: 240% !important;
@@ -74,6 +84,10 @@ legend {
 
     table {
         font-size: 80%;
+    }
+
+    .checkboxes, .radiobuttons {
+        font-size: 85%;
     }
 
 }

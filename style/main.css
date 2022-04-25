@@ -268,10 +268,23 @@ a.navbar-brand.d-md-none {
         width: 100%;
     }
 
-    .switcher:hover {
+    .switcher:hover img {
         filter: hue-rotate(190deg);
         transform: rotate(720deg);
         transition: transform 1s;
+    }
+
+    .switcher:hover::before {
+        content: "Switch style";
+        position: absolute;
+        left: -140px;
+        top: 5px;
+        font-size: 130%;
+        border: 2px solid var(--portalorange);
+        border-radius: 5px;
+        padding: 0 5px;
+        background-color: black;
+        transition: 0.5s;
     }
 
     /* #endregion */
