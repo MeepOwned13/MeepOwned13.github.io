@@ -67,10 +67,22 @@ legend {
     font-size: 120%;
 }
 
+.switcher img {
+    filter: hue-rotate(190deg);
+}
+
+.switcher:hover img {
+    filter: hue-rotate(0deg);
+    transform: rotate(720deg);
+    transition: transform 1s, filter 0.8s;
+}
+
 .switcher:hover::before {
-    left: -170px;
+    content: "Normal style";
+    left: -175px;
     top: 1px;
     font-size: 110%;
+    border: 1px solid var(--portalblue);
 }
 
 @media screen and (max-width: 800px) {

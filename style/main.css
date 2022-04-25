@@ -271,13 +271,13 @@ a.navbar-brand.d-md-none {
     .switcher:hover img {
         filter: hue-rotate(190deg);
         transform: rotate(720deg);
-        transition: transform 1s;
+        transition: transform 1s, filter 0.8s;
     }
 
     .switcher:hover::before {
-        content: "Switch style";
+        content: "Alternate style";
         position: absolute;
-        left: -140px;
+        left: -160px;
         top: 5px;
         font-size: 130%;
         border: 2px solid var(--portalorange);
