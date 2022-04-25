@@ -82,8 +82,8 @@ legend {
 }
 
 .switcher:hover::before {
-    content: "Normal style";
-    left: -175px;
+    content: "Default style";
+    left: -185px;
     top: 1px;
     font-size: 110%;
     border: 2px solid var(--portalblue);
