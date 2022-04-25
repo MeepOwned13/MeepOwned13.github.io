@@ -82,7 +82,7 @@ legend {
     left: -175px;
     top: 1px;
     font-size: 110%;
-    border: 1px solid var(--portalblue);
+    border: 2px solid var(--portalblue);
 }
 
 @media screen and (max-width: 800px) {
