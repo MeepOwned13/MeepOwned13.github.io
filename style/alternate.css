@@ -35,6 +35,10 @@ h1 {
     width: 100%;
 }
 
+.jumptocontent {
+    width: 410px;
+}
+
 .navbar {
     width: 100%;
     background: var(--boxcolor);
