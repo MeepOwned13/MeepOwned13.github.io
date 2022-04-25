@@ -1,11 +1,20 @@
-@media print {
+@font-face {
+    font-family: CakeText;
+    src: url('../fonts/CaveatBrush-Regular.ttf') format('truetype');
+}
 
+@media print {
+    
     :root {
         --portalblue: black;
         --portalorange: black;
     }
 
     * {
+        color: black;
+    }
+
+    a, a:visited {
         color: black;
     }
 
@@ -33,6 +42,11 @@
         transform: none;
         top: 0;
         text-align: center;
+        font-family: CakeText, cursive;
+        font-size: 350%;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: black;
     }
 
     footer p {
@@ -81,6 +95,10 @@
         width: 100%;
     }
 
+    aside.extra {
+        display: none;
+    }
+
     .righttext .extra, .lefttext .extra {
         border: none;
     }
@@ -107,5 +125,9 @@
 
     a:after {
         content: " (" attr(href) ")";
+    }
+
+    a[href="media/companion_cube.jpg"]::after {
+        content: none;
     }
 }
