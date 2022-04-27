@@ -60,6 +60,19 @@
     footer p {
         width: 70%;
     }
+
+    footer:hover h2{
+        animation: none;
+
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    footer:hover div.teleports{
+        display: none;
+        width: 0;
+        height: 0;
+    }
 }
 
 /* #endregion */

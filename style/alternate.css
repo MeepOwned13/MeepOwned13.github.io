@@ -55,6 +55,14 @@ footer p {
     width: 100% !important;
 }
 
+footer:hover h2{
+    animation: none;
+}
+
+footer:hover div.teleports{
+    display: none;
+}
+
 .triple img {
     display: none;
 }

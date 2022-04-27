@@ -28,8 +28,8 @@
 body {
     background-color: black;
     background-image: url('../media/custom_left.png'), url('../media/custom_right.png'), url('../media/longtiles_dark.png');
-    background-size: contain, contain, contain;
-    background-repeat: no-repeat, no-repeat, repeat;
+    background-size: contain, contain, auto;
+    background-repeat: no-repeat, no-repeat, repeat-y;
     background-attachment: fixed, fixed, scroll;
     background-position: left, right, 0 0;
     padding: 10px;
@@ -48,6 +48,7 @@ header, main, footer {
 
 p {
     text-align: justify;
+    margin-bottom: 5px;
 }
 
 li {
@@ -225,16 +226,16 @@ header > a img{
     margin: 0 auto;
 }
 
-.nav-link {
-    color: var(--portalorange) !important;
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--portalorange);
 }
 
-.nav-link.active {
-    color: var(--portalblue) !important;
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--portalblue);
 }
 
-.nav-link:hover {
-    color: white !important;
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: white;
     transition: 0.6s;
 }
 
@@ -293,37 +294,75 @@ a.navbar-brand.d-md-none {
 
 /* #region footer */
 
-    footer {
-        margin: 50px auto;
-        position: relative;
-        background-image: url("../media/dark_tiles.jpg");
-        background-size: contain;
-        border-radius: 15px;
+footer {
+    margin: 50px auto;
+    position: relative;
+    background-image: url("../media/dark_tiles.jpg");
+    background-size: contain;
+    border-radius: 15px;
+}
+
+footer h2 {
+    text-align: center;
+    width: 40%;
+    margin-top: 0;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -ms-transform: translateY(-50%) rotate(-10deg);
+    transform: translateY(-50%) rotate(-10deg);
+    float: right;
+    font-size: 350%;
+    font-family: CakeText, cursive;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: rgb(203, 203, 203);
+}
+
+footer p {
+    width: 58%;
+    background: var(--boxcolor);
+    border-radius: 15px;
+    padding: 15px;
+}
+
+footer:hover h2 {
+    animation: GoThrough 2s linear infinite;
+    transform: rotate(0);
+    transition: 0.3s;
+}
+
+@keyframes GoThrough {
+    0%{}
+
+    25%{
+        top:65%
     }
 
-    footer h2 {
-        text-align: center;
-        width: 40%;
-        margin-top: 0;
-        position: absolute;
-        top: 50%;
-        right: 0;
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%) rotate(-10deg);
-        float: right;
-        font-size: 350%;
-        font-family: CakeText, cursive;
-        font-weight: 500;
-        letter-spacing: 2px;
-        color: rgb(203, 203, 203);
+    25.1% {
+        top: 0%;
     }
 
-    footer p {
-        width: 58%;
-        background: var(--boxcolor);
-        border-radius: 15px;
-        padding: 15px;
-    }
+    100%{}
+}
+
+footer div.teleports {
+    display: none;
+}
+
+footer:hover div.teleports {
+    width: 42%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: url('../media/top.png'), url('../media/bottom.png');
+    background-size: contain, contain;
+    background-repeat: no-repeat, no-repeat;
+    background-position: top, bottom;
+    border-radius: 10px;
+}
 
 /* #endregion */
 
