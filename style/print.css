@@ -1,8 +1,3 @@
-@font-face {
-    font-family: CakeText;
-    src: url('../fonts/CaveatBrush-Regular.ttf') format('truetype');
-}
-
 @media print {
     
     :root {
@@ -11,7 +6,13 @@
     }
 
     * {
+        font-family: 'Times New Roman', Times, serif;
         color: black;
+    }
+
+    h2, .portalsr h2 span, .boxed h2 span, footer h2 {
+        font-family: 'Garamond', 'Times New Roman', Times, serif;
+        font-weight: bold;
     }
 
     a, a:visited {
@@ -42,11 +43,11 @@
         transform: none;
         top: 0;
         text-align: center;
-        font-family: CakeText, cursive;
         font-size: 350%;
         font-weight: 500;
         letter-spacing: 2px;
         color: black;
+        page-break-before: auto;
     }
 
     footer p {
@@ -129,5 +130,9 @@
 
     a[href="media/companion_cube.jpg"]::after {
         content: none;
+    }
+
+    div.nav{
+        display: none;
     }
 }

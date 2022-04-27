@@ -139,7 +139,11 @@ a:hover {
 }
 
 a:visited {
-    color: #00eeff;
+    color: rgb(0, 120, 255);
+}
+
+a:visited:hover {
+    color: var(--portalorange);
 }
 
 h2.invisible {
@@ -327,7 +331,7 @@ footer p {
 }
 
 footer:hover h2 {
-    animation: GoThrough 2s linear infinite;
+    animation: GoThrough 0.5s linear infinite;
     transform: rotate(0);
     transition: 0.3s;
 }
