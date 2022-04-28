@@ -42,6 +42,7 @@ header, main, footer {
     width: 80%;
     min-width: 280px;
     max-width: 1000px;
+    transition: 0.2s;
 }
 
 /* #region basestyle */
@@ -148,22 +149,31 @@ h2.invisible {
 li {
     text-align: left;
     list-style: none;
+    font-size: 110%;
     margin-bottom: 5px;
-    transition: 0.2s;
 }
 
 li::before {
     content: '';
     display: inline-block;
-    background-image: url("../media/icon_time.png");
-    background-size: 16px;
-    width: 16px;
-    height: 16px;
+    margin-bottom: -3px;
+    background-image: url("../media/icons/icon_time.png");
+    background-size: 20px;
+    width: 20px;
+    height: 20px;
     margin-right: 5px;
-    transition: 0.2s;
 }
 
-/* .triple li:nth-of-type(4){background-image: url("../media/icon_time.png")} */
+.triple li:nth-of-type(4)::before{background-image: url("../media/icons/icon_glados.png")}
+
+.portalsr li:nth-of-type(1)::before{background-image: url("../media/icons/icon_oob.png")}
+.portalsr li:nth-of-type(2)::before{background-image: url("../media/icons/icon_inbounds.png")}
+.portalsr li:nth-of-type(3)::before{background-image: url("../media/icons/icon_nosla.png")}
+.portalsr li:nth-of-type(4)::before{background-image: url("../media/icons/icon_glitchless.png")}
+
+.sidebyside li:nth-of-type(1)::before{background-image: url("../media/icons/icon_walk.png")}
+.sidebyside li:nth-of-type(2)::before{background-image: url("../media/icons/icon_button.png")}
+.sidebyside li:nth-of-type(3)::before{background-image: url("../media/icons/icon_drop.png")}
 
 /* #endregion */
 
@@ -227,6 +237,7 @@ header > a img{
 .navbar-nav li {
     background: none;
     padding: 0 10px;
+    margin: 0;
     font-size: 120%;
 }
 
@@ -344,6 +355,7 @@ footer h2 {
     letter-spacing: 2px;
     color: rgb(203, 203, 203);
     transition: 0.3s;
+    cursor: default;
 }
 
 footer p {
