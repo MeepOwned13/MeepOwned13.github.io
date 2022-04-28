@@ -28,8 +28,8 @@
 body {
     background-color: black;
     background-image: url('../media/custom_left.png'), url('../media/custom_right.png'), url('../media/longtiles_dark.png');
-    background-size: contain, contain, auto;
-    background-repeat: no-repeat, no-repeat, repeat-y;
+    background-size: contain, contain, contain;
+    background-repeat: no-repeat, no-repeat, repeat;
     background-attachment: fixed, fixed, scroll;
     background-position: left, right, 0 0;
     padding: 10px;
@@ -49,15 +49,6 @@ header, main, footer {
 p {
     text-align: justify;
     margin-bottom: 5px;
-}
-
-li {
-    text-align: left;
-    background-image: url("../media/icon_time.png");
-    background-repeat: no-repeat;
-    background-position: left 4px;
-    padding: 3px 10px 3px 24px;
-    list-style: none;
 }
 
 h1 {
@@ -152,6 +143,30 @@ h2.invisible {
 
 /* #endregion */
 
+/* #region li */
+
+li {
+    text-align: left;
+    list-style: none;
+    margin-bottom: 5px;
+    transition: 0.2s;
+}
+
+li::before {
+    content: '';
+    display: inline-block;
+    background-image: url("../media/icon_time.png");
+    background-size: 16px;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    transition: 0.2s;
+}
+
+/* .triple li:nth-of-type(4){background-image: url("../media/icon_time.png")} */
+
+/* #endregion */
+
 /* #region jumptocontent */
 
 .jumptocontent {
@@ -215,6 +230,10 @@ header > a img{
     font-size: 120%;
 }
 
+.navbar-nav li::before{
+    content: none;
+}
+
 .navbar {
     width: 55%;
     background-image: url('../media/nav_tiles.jpg');
@@ -232,15 +251,17 @@ header > a img{
 
 .navbar-dark .navbar-nav .nav-link {
     color: var(--portalorange);
+    transition: color 0.4s;
 }
 
 .navbar-dark .navbar-nav .nav-link.active {
     color: var(--portalblue);
+    transition: color 0.4s;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
     color: white;
-    transition: 0.6s;
+    transition: color 0.4s;
 }
 
 .navbar-brand img {
@@ -262,7 +283,6 @@ a.navbar-brand.d-md-none {
         right: 0;
         width: 45px;
         height: 45.58px;
-        
         border-radius: 0 6px 0 0;
     }
     
@@ -271,6 +291,7 @@ a.navbar-brand.d-md-none {
         border-radius: 0 4px 0 0;
         padding: 0;
         width: 100%;
+        transition: filter 0.4s;
     }
 
     .switcher:hover img {
@@ -290,6 +311,7 @@ a.navbar-brand.d-md-none {
         padding: 0 5px;
         background-color: black;
         transition: 0.5s;
+        pointer-events: none;
     }
 
     /* #endregion */
@@ -321,6 +343,7 @@ footer h2 {
     font-weight: 500;
     letter-spacing: 2px;
     color: rgb(203, 203, 203);
+    transition: 0.3s;
 }
 
 footer p {
@@ -331,7 +354,7 @@ footer p {
 }
 
 footer:hover h2 {
-    animation: GoThrough 0.5s linear infinite;
+    animation: GoThrough 0.3s linear infinite;
     transform: rotate(0);
     transition: 0.3s;
 }
@@ -380,6 +403,7 @@ footer:hover div.teleports {
 
 .triple img {
     margin: 0 10px;
+    transition: 0.5s;
 }
 
 .triple img:hover {
@@ -607,6 +631,7 @@ video {
     
     .data input:hover, .data input:focus, textarea:hover, textarea:focus {
         border: 2px solid var(--portalorange);
+        transition: 0.1s;
     }
 
     .data input:focus, textarea:focus {
@@ -624,6 +649,10 @@ video {
         margin: auto;
     }
 
+    .checkboxes label, .radiobuttons label {
+        transition: 0.3s;
+    }
+
     .checkboxes label:hover, .radiobuttons label:hover {
         color: var(--portalorange);
         margin-left: 10px;
@@ -632,6 +661,7 @@ video {
 
     input[type="checkbox"]:checked + label, input[type="radio"]:checked + label{
         color: var(--portalorange);
+        transition: 0.3s;
     }
 
     input[type="checkbox"], input[type="radio"] {
@@ -641,7 +671,7 @@ video {
         background: var(--boxcolor);
         border: 1px solid var(--portalblue);
         display: inline-block;
-        transition: 0.2s;
+        transition: 0.3s;
     }
 
     input[type="checkbox"] {
