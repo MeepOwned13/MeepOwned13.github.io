@@ -390,7 +390,7 @@ footer p {
         100%{}
     }
 
-    footer:hover::before {
+    footer::before {
         content: "";
         width: 42%;
         height: 102%;

@@ -68,10 +68,8 @@
         transform: translateY(-50%);
     }
 
-    footer:hover div.teleports{
+    footer::before {
         display: none;
-        width: 0;
-        height: 0;
     }
 }
 
