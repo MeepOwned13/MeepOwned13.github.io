@@ -16,8 +16,14 @@ header, main, footer{
     max-width: 1300px;
 }
 
-li {
-    background-position: left 10px;
+h1 {
+    width: 100%;
+}
+
+li::before {
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
 }
 
 header {
@@ -31,9 +37,6 @@ header img {
     margin: auto;
 }
 
-h1 {
-    width: 100%;
-}
 
 .jumptocontent {
     width: 410px;
@@ -45,6 +48,22 @@ h1 {
     border-radius: 0 0 8px 8px;
     border-right: none;
     padding: 0;
+}
+
+.switcher img {
+    filter: hue-rotate(190deg);
+}
+
+.switcher:hover img {
+    filter: hue-rotate(0deg);
+}
+
+.switcher:hover::before {
+    content: "Default style";
+    left: -175px;
+    top: 1px;
+    font-size: 110%;
+    border: 2px solid var(--portalblue);
 }
 
 footer h2 {
@@ -59,7 +78,7 @@ footer:hover h2{
     animation: none;
 }
 
-footer:hover div.teleports{
+footer:hover::before {
     display: none;
 }
 
@@ -79,27 +98,6 @@ legend {
     font-size: 120%;
 }
 
-.switcher img {
-    filter: hue-rotate(190deg);
-}
-
-.switcher:hover img {
-    filter: hue-rotate(0deg);
-}
-
-.switcher:hover::before {
-    content: "Default style";
-    left: -175px;
-    top: 1px;
-    font-size: 110%;
-    border: 2px solid var(--portalblue);
-}
-
-li::before {
-    background-size: 30px;
-    width: 30px;
-    height: 30px;
-}
 
 @media screen and (max-width: 800px) {
     h1 {

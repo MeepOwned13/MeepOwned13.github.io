@@ -368,42 +368,43 @@ footer p {
     margin-bottom: 0;
 }
 
-footer:hover h2 {
-    animation: GoThrough 0.4s linear infinite;
-    transform: rotate(0);
-    transition: 0.3s;
-}
+    /* #region animation */
 
-@keyframes GoThrough {
-    0%{}
-
-    35%{
-        top: 95%
+    footer:hover h2 {
+        animation: GoThrough 0.4s linear infinite;
+        transform: rotate(0);
+        transition: 0.3s;
     }
 
-    35.1% {
-        top: -25%;
+    @keyframes GoThrough {
+        0%{}
+
+        35%{
+            top: 95%
+        }
+
+        35.1% {
+            top: -30%;
+        }
+
+        100%{}
     }
 
-    100%{}
-}
+    footer:hover::before {
+        content: "";
+        width: 42%;
+        height: 102%;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: -1%;
+        border-top: 12px solid var(--portalblue);
+        border-bottom: 12px solid var(--portalorange);
+        border-radius: 20px;
+        filter: blur(0.4em);
+    }
 
-footer div.teleports {
-    display: none;
-}
-
-footer:hover div.teleports {
-    width: 42%;
-    height: 102%;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: -1%;
-    border-top: 12px solid var(--portalblue);
-    border-bottom: 12px solid var(--portalorange);
-    border-radius: 20px;
-    filter: blur(0.4em);
-}
+    /* #endregion */
 
 /* #endregion */
 
