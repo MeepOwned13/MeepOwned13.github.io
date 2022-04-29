@@ -371,20 +371,24 @@ footer p {
     /* #region animation */
 
     footer:hover h2 {
-        animation: GoThrough 0.4s linear infinite;
+        animation: GoThrough 0.5s linear infinite;
         transform: rotate(0);
+        filter: blur(1px);
+        text-shadow: 0 -5px 3px rgb(180, 180, 180);
         transition: 0.3s;
     }
 
     @keyframes GoThrough {
         0%{}
 
-        35%{
-            top: 95%
+        40%{
+            /* top: 95% */
+            transform: translateY(200%);
         }
 
-        35.1% {
-            top: -30%;
+        40.0001% {
+            /* top: -30%; */
+            transform: translateY(-300%);
         }
 
         100%{}
@@ -402,6 +406,25 @@ footer p {
         border-bottom: 12px solid var(--portalorange);
         border-radius: 20px;
         filter: blur(0.4em);
+        
+    }
+
+    footer:hover::before{
+        animation: teleport 0.5s linear infinite;
+    }
+
+    @keyframes teleport {
+        0%{}
+
+        10%{ border-bottom-width: 12px; }
+
+        30%{ border-bottom-width: 30px; border-top-width: 12px;}
+
+        50%{ border-bottom-width: 12px; border-top-width: 30px;}
+
+        70%{ border-top-width: 12px; }
+
+        100%{}
     }
 
     /* #endregion */
