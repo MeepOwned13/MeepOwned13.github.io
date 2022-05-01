@@ -70,6 +70,10 @@ footer h2 {
     display: none;
 }
 
+footer::before {
+    display: none;
+}
+
 footer p {
     width: 100% !important;
 }

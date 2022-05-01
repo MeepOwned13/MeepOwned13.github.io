@@ -44,7 +44,7 @@
 
 /* #region footer */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
 
     footer h2 {
         -ms-transform: translateY(-50%);
@@ -63,7 +63,8 @@
 
     footer:hover h2{
         animation: none;
-
+        filter: none;
+        text-shadow: none;
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
     }
