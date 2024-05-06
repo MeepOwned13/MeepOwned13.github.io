@@ -24,6 +24,8 @@ function addIntervalToButton(button, func, ms, intervalName) {
     let removeInterval = () => clearInterval(_intervals[intervalName])
 
     let addInterval = (event) => {
+        event.preventDefault() // so mousedown and touchstart don't conflict on press
+
         // just in case it gets stuck, another press will remove the interval
         if (_intervals[intervalName] !== null) {
             clearInterval(_intervals[intervalName])
@@ -34,7 +36,6 @@ function addIntervalToButton(button, func, ms, intervalName) {
             if (button.disabled) removeInterval()
             func()
         }, ms)
-        event.preventDefault() // so mousedown and touchstart don't conflict on press
     }
 
     button.addEventListener("mousedown", addInterval)
