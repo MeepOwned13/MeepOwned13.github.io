@@ -32,7 +32,7 @@ function addIntervalToButton(button, func, ms, intervalName) {
 
         // just in case it gets stuck, another press will remove the interval
         if (_intervals[intervalName] !== null) {
-            clearInterval(_intervals[intervalName])
+            removeInterval()
             return
         }
 
