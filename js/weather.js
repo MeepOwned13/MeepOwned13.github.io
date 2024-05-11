@@ -24,7 +24,7 @@ class OmszController extends PlotController {
     * @param {String} containerId - id of container to add elements to
     * @param {String} lastUpdateKey - key of update time in index given to setup(index)
     * @param {String} urlAId - id of <a> element to put data source url into
-    * @param {Object} mapFormat - object specifying col names from api as keys and objects as values that set => name, min, max and gradient for colors, measurement and directionFeature if needed
+    * @param {Object} mapFormat - object specifying col names from api as keys and objects as values that set -> name, min, max and gradient for colors, measurement and directionFeature if needed
     * @param {number} stepSize - stepSize for navigational buttons in minutes
     * @param {number} maxWidth - CSS dependant maximal size of containers inside (excludes padding)
     */
@@ -301,6 +301,7 @@ class OmszController extends PlotController {
         await this.updateStatus(index)
         this._dateInput.value = this._dateInput.max
 
+        // dropdown init
         let dropdownOptions = []
         for (let key in this.#mapFormat) {
             dropdownOptions.push(
@@ -310,6 +311,7 @@ class OmszController extends PlotController {
         this.#dropdown.innerHTML = dropdownOptions.join("\n")
 
 
+        // logo request
         fetchData(this._apiUrl + "logo").then((resp) => {
             this.#logoImg.src = resp
         })
@@ -322,13 +324,17 @@ class OmszController extends PlotController {
             event.preventDefault()
         })
 
+        // datetime-local event
         this._dateInput.addEventListener("change", async () => {
             await this.updatePlot()
         })
+
+        // dropdown event
         this.#dropdown.addEventListener("change", async () => {
             await this.updatePlot()
         })
 
+        // button events
         addIntervalToButton(this._forwardButton, async () => {
             addMinutesToInputFloored(this._dateInput, this._stepSize, this._stepSize)
             await this.updatePlot()
@@ -339,6 +345,7 @@ class OmszController extends PlotController {
             await this.updatePlot()
         }, 200, "omszBackward")
 
+        // resize event
         window.addEventListener("resize", () => {
             clearTimeout(this.#resizeTimeout)
             this.#resizeTimeout = setTimeout(() => {
